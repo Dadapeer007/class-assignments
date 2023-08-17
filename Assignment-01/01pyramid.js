@@ -10,5 +10,5 @@ for(let i=1;i<=numRows;i++)
   {
     row+='*';
   }  
-  console.log(row);
+  console.log(row)
 }
