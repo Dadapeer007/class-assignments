@@ -1,3 +1,4 @@
+//WAP to add sum of N number
 let N=5; // Replace with your desired value of N
 let sum=0;
 let count=1;
