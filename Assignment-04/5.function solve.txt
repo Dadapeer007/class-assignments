@@ -1,0 +1,14 @@
+5.function solve(n)
+{
+	let i = 1
+	while(i < n)
+	{
+		let x = i
+		while(x--)
+		{
+			o(1)
+		}
+		i++
+	}
+}
+Ans: The time complexity of the code is O(n^2), and the space complexity is O(1).
