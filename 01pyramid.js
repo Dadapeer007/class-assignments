@@ -11,7 +11,7 @@ for(let i=1;i<=numRows;i++)
   }
   for(let k=1;k<=2*i-1;k++)
   {
-    row+='*' ;
+    row+='*'
   }  
   console.log(row);
 }
