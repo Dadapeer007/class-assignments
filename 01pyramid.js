@@ -1,5 +1,5 @@
 //WAP to print the pyramid using "*"
-//number of rows are 5
+//number of rows are 5 row
 
 let numRows=5;  // Number of rows in the pyramid
 for(let i=1;i<=numRows;i++)
@@ -11,7 +11,7 @@ for(let i=1;i<=numRows;i++)
   }
   for(let k=1;k<=2*i-1;k++)
   {
-    row+='*';
+    row+='*' ;
   }  
   console.log(row);
 }
