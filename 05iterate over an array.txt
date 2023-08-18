@@ -1,0 +1,19 @@
+5.How to iterate over an array? Explain with an example.
+ans:
+The ieratetion can be possible while haveing loops. normally there are two types of loops.
+a.for loop
+b.while loop
+
+ex: array = [1, 2, 3, 4, 5]
+To get an length of an array there are using build in function called arr.len.
+By using the loop of the array from initial value of index from zero to total length of array.
+Frist create an variable to store the index values like let i=0.
+Additionally to compare the arr.length if condition is true it executed  
+And some value is I will be increment as per reequipment.
+Here's an example that demonstrates how to iterate over an array using only a for loop:
+
+ex:  = [1, 2, 3, 4, 5]
+In this example, the array [1, 2, 3, 4, 5] is used. 
+The for loop iterates from index 0 to index length - 1 (0 to 4 in this case). 
+Inside the loop, the current element is accessed using the current index (array[i]). 
+In this example, the elements are simply printed to the console using console.log(element)
