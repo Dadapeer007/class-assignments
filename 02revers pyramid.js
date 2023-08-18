@@ -1,4 +1,4 @@
-// WAP to print the revers pyramid using  "*"
+// WAP to print the revers pyramid using "*"
 
 let rows=5;
 for(let i=rows;i>=1;i--)
