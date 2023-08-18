@@ -1,3 +1,5 @@
+//WAP to print the diamand shape using "*"
+
 let rows=5; // Number of rows in the diamond shape
 // Upper half of the diamond
 for(let i=1;i<=rows;i++)
