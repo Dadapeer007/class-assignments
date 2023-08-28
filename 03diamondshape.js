@@ -1,5 +1,5 @@
 //WAP to print the diamand shape using "*"
-//given the number of rows are 5.
+//given the number of rows are 5
 
 let rows=5; // Number of rows in the diamond shape
 // Upper half of the diamond
