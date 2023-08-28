@@ -1,5 +1,5 @@
 // WAP to print the revers pyramid using "*"
-
+// given the number of rows are 5
 let rows=5;
 for(let i=rows;i>=1;i--)
 {
