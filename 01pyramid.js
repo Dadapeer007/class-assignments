@@ -1,7 +1,7 @@
 //WAP to print the pyramid using "*"
 //number of rows are 5 row
 
-let numRows=5;  // Number of rows in the pyramid
+let numRows=5 // Number of rows in the pyramid
 for(let i=1;i<=numRows;i++)
 {
   let row='';// Add spaces before the asterisks
