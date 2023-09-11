@@ -1,3 +1,5 @@
+/*7. Substring search - Given a string, find the pattern provide by user? if yes, print the index of the substring else print - 1.*/
+
 function substringSearch(string, pattern) {
   if(pattern.length>string.length){
     return -1
