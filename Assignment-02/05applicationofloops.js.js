@@ -1,4 +1,5 @@
 // Function to calculate the sum of array values using a for loop
+
 function sumArrayForLoop(arr)
 {
     var sum=0;
