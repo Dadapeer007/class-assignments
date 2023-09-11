@@ -1,3 +1,5 @@
+/*4. How do you calculate the number of vowels and consonants in a String?*/
+
 function countVowelsAndConsonants(str){
     let vowels=0
     let consonants=0  
