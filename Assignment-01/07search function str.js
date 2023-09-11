@@ -1,3 +1,4 @@
+/*implement your own search function for strings. Without using build in function.*/
 function searchString(str,pattern)
 {
     for(let i=0;i<=str.length-pattern.length;i++)
