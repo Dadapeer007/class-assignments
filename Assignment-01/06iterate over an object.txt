@@ -1,5 +1,7 @@
-6.How to iterate over an object data? Explain with an example.
+How to iterate over an object data? Explain with an example.
+
 Ans:
+
 To iterate over an object's data, you typically need to access the object's properties or keys and then process the corresponding values.
 
 •	Determine the type of object: Objects can take different forms, such as dictionaries, arrays, or custom classes. Understanding the object's structure will help you choose the appropriate iteration method.
