@@ -1,3 +1,5 @@
+/*6. How do you reverse an array?*/
+
 function reverseArray(arr){
     let start=0
     let end=arr.length-1
