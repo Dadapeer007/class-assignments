@@ -1,3 +1,5 @@
+/*2.	Create a calculator to perform sum, subtraction, multiplication and division of 2 integers provided by user*/
+
 // Function to perform addition
 function add(a,b)
 {
