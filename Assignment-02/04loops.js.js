@@ -1,4 +1,4 @@
-// Function to print array values using a for loop
+/* Function to print array values using a for loop*/
 
 function printArrayForLoop(arr)
 {
