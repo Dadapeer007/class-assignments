@@ -1,3 +1,5 @@
+/*5. How do you get the matching elements(repeated array value) in an integer array? Also, find the frequency of the repeated element?*/
+
 function findRepeatedElements(arr){
   let repeatedElements=[];
   let frequency={}
