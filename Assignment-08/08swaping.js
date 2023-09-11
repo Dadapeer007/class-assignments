@@ -1,3 +1,5 @@
+/*8. How would you swap two numbers without using a third variable?*/
+
 function swapNumbers(a,b){
     a=a^b
     b=a^b
