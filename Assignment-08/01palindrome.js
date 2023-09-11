@@ -1,3 +1,5 @@
+/*1. Determine if a string/number is a palindrome?*/
+
 function isPalindrome(input){
     let str=String(input)
     let length=str.length
