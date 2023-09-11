@@ -1,4 +1,4 @@
-// Function to calculate the sum of array values using a for loop
+/* Function to calculate the sum of array values using a for loop*/
 
 function sumArrayForLoop(arr)
 {
