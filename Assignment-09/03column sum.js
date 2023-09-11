@@ -1,53 +1,34 @@
-/*Q2. Anti Diagonals
+/*Q3. Column Sum
 Problem Description
-Give a N * N square matrix A, return an array of its anti-diagonals. Look at the example for more details.
+You are given a 2D integer matrix A, return a 1D integer array containing column-wise sums of original matrix.
 Problem Constraints
-1<= N <= 1000
-1<= A[i][j] <= 10^9
-
+1 <= A.size() <= 10^3
+1 <= A[i].size() <= 10^3
+1 <= A[i][j] <= 10^3
 Input Format
-Only argument is a 2D array A of size N * N.
+First argument is a 2D array of integers.(2D matrix).
 Output Format
-Return a 2D integer array of size (2 * N-1) * N, representing the anti-diagonals of input array A.
-The vacant spaces in the grid should be assigned to 0.
+Return an array containing column-wise sums of original matrix.
 
 Example Input
 
 Input 1:
-1 2 3
-4 5 6
-7 8 9
-
-Input 2:
-1 2
-3 4
+[1,2,3,4]
+[5,6,7,8]
+[9,2,3,4]
 
 Example Output
 
 Output 1:
-1 0 0
-2 4 0
-3 5 7
-6 8 0
-9 0 0
-Output 2:
-1 0
-2 3
-4 0
+{15,10,13,16}
 
 Example Explanation
-For input 1:
-The first anti diagonal of the matrix is [1 ], the rest spaces shoud be filled with 0 making the row as [1, 0, 0].
-The second anti diagonal of the matrix is [2, 4 ], the rest spaces shoud be filled with 0 making the row as [2, 4, 0].
-The third anti diagonal of the matrix is [3, 5, 7 ], the rest spaces shoud be filled with 0 making the row as [3, 5, 7].
-The fourth anti diagonal of the matrix is [6, 8 ], the rest spaces shoud be filled with 0 making the row as [6, 8, 0].
-The fifth anti diagonal of the matrix is [9 ], the rest spaces shoud be filled with 0 making the row as [9, 0, 0].
+Explanation 1
 
-For input 2:
-
-The first anti diagonal of the matrix is [1 ], the rest spaces shoud be filled with 0 making the row as [1, 0, 0].
-The second anti diagonal of the matrix is [2, 4 ], the rest spaces shoud be filled with 0 making the row as [2, 4, 0].
-The third anti diagonal of the matrix is [3, 0, 0 ], the rest spaces shoud be filled with 0 making the row as [3, 0, 0].*/
+Column 1 = 1+5+9 = 15
+Column 2 = 2+6+2 = 10
+Column 3 = 3+7+3 = 13
+Column 4 = 4+8+4 = 16*/
 
 function getColumnSums(A){
     const rows=A.length
