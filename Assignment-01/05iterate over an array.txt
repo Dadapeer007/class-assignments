@@ -1,5 +1,7 @@
-5.How to iterate over an array? Explain with an example.
-ans:
+How to iterate over an array? Explain with an example.
+
+answer:
+
 The ieratetion can be possible while haveing loops. normally there are two types of loops.
 a.for loop
 b.while loop
