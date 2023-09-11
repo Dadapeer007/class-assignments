@@ -1,3 +1,5 @@
+/*3. How to find out if the given two strings are anagrams or not?*/
+
 function areAnagrams(str1,str2){
   if(str1.length!==str2.length){
     return false
