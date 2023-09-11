@@ -1,4 +1,5 @@
 // Function to print array values using a for loop
+
 function printArrayForLoop(arr)
 {
     for(var i=0;i<arr.length;i++)
