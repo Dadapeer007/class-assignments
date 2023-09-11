@@ -1,3 +1,5 @@
+/*implement array reversal. without using build in function.*/
+
 let array=[3,2,1]
 let length=array.length
 for(let i=0;i<length/2;i++)
