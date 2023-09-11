@@ -1,3 +1,5 @@
+/*Create a calculator using function for each operation - sum, subtraction, multiplication and division of 2 integers provided by user*/
+
 // Function to add two numbers
 function add(num1,num2)
 {
