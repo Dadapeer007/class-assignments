@@ -30,8 +30,7 @@ Explanation 2:
 Removing arr[0] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
 Removing arr[1] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
 Removing arr[2] from the given array modifies arr[] to { 1, 1 } such that arr[0] = arr[1] 
-Therefore, the required output is 3.
-*/
+Therefore, the required output is 3.*/
 
 function countSpecialIndices(A)
 {
