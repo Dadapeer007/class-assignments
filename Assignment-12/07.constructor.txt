@@ -1,0 +1,24 @@
+7. what is a constructor?
+The constructor is a special function that is used to create and initialize objects. Constructors are typically defined as regular functions but are invoked with the `new` keyword to create instances of objects, often referred to as "instances" or "objects" themselves. Constructors are a fundamental concept in object-oriented programming and provide a way to define the blueprint for objects of a specific type or class.
+
+example:
+
+// Define a constructor function for a 'Person' object
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// Create instances (objects) using the constructor
+const person1 = new Person("John", 30);
+const person2 = new Person("Jane", 25);
+
+// Accessing the properties of instances
+console.log(person1.name); // Output: "John"
+console.log(person2.age);  // Output: 25
+
+In this example:
+
+1. We define a constructor function called `Person` that takes `name` and `age` as parameters. Inside the constructor, we use the `this` keyword to refer to the newly created object.
+2. We create two instances (`person1` and `person2`) using the `new` keyword followed by the constructor function. This invokes the constructor and initializes the properties of each instance.
+3. We can access the properties of each instance using dot notation (`objectName.propertyName`).

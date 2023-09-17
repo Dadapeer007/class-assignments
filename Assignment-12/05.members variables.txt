@@ -1,0 +1,24 @@
+5. What are member variables?
+
+the member variables are properties or variables associated with an object. These variables hold data specific to that object and can be accessed and modified through the object's reference. Member variables are an essential part of object-oriented programming. You can define member variables in JavaScript by including them as properties within an object.
+
+Here's an example of defining member variables within an object:
+
+// Create an object called 'Person' with member variables 'name' and 'age'
+const person = {
+  name: "John",
+  age: 30
+};
+
+// Accessing member variables
+console.log(person.name); // Output: "John"
+console.log(person.age);  // Output: 30
+
+// Modifying member variables
+person.name = "Jane";
+person.age = 25;
+
+console.log(person.name); // Output: "Jane"
+console.log(person.age);  // Output: 25.
+
+the `name` and `age` are member variables of the `person` object. You can access and modify them using the dot notation (`objectName.propertyName`). Member variables can be of any valid data type in JavaScript, including numbers, strings, arrays, functions, or even other objects.

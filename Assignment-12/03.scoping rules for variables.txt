@@ -1,0 +1,41 @@
+3. Describe the scoping rules for variables declared with var, let, and const.
+Explain with the example.
+
+
+a.`var` Variables (Function-Scoped):
+
+*Variables declared with `var` have function scope or global scope if declared outside of any function.
+*They are hoisted to the top of their containing function or global scope, which means their   declarations are moved to the top of the code during compilation.
+*`var` variables can be accessed anywhere within their containing function or globally, even before the point where they are declared (resulting in an `undefined` value until assigned).
+*It's important to note that `var` variables are not block-scoped; they are function-scoped. This means they are not limited by code blocks (e.g., `if` statements or loops).
+
+    function exampleFunction() {
+       console.log(varVar); // undefined
+       var varVar = 10;
+       console.log(varVar); // 10
+   }
+   exampleFunction();
+   console.log(varVar); // undefined (if declared globally)
+  
+b.`let` and `const` Variables (Block-Scoped):
+
+*Variables declared with `let` and `const` have block scope, which means they are limited to the block (enclosed by curly braces `{}`) in which they are defined.
+*They are also hoisted to the top of their containing block but remain in the "temporal dead zone" (TDZ) until their actual declaration is encountered in the code.
+*Unlike `var`, you cannot access them before their declaration in the code, which helps catch potential issues early.
+*Block-scoped variables are more predictable and can be used to create more isolated and controlled scopes within your code.
+
+   if (true) {
+       console.log(letVar); // ReferenceError: Cannot access 'letVar' before initialization
+       let letVar = 20;
+       console.log(letVar); // 20
+   }
+
+
+c.`const` Variables (Block-Scoped with Immutability):
+
+*Variables declared with `const` also have block scope like `let`.
+*The key difference is that `const` variables must be assigned a value at the time of declaration, and their value cannot be changed after assignment (they are immutable).
+*While the variable itself cannot be reassigned, the value it holds may be mutable if it is an object or an array. For example, you can modify the properties of a `const` object or add elements to a `const` array, but you cannot reassign the variable to a completely new object or array.
+
+   const pi = 3.14159;
+   pi = 4; // Error: Assignment to constant variable.

@@ -1,0 +1,23 @@
+
+6. What are member functions?
+the member functions, also known as methods, are functions that are associated with objects. These functions are defined as properties of an object and can be called on that object to perform specific tasks or operations related to that object's data. Member functions allow objects to encapsulate behavior and are a fundamental concept in object-oriented programming.
+
+// Define an object 'calculator' with member functions 'add' and 'multiply'
+const calculator = {
+  add: function (a, b) {
+    return a + b;
+  },
+  multiply: function (a, b) {
+    return a * b;
+  }
+};
+
+// Call member functions on the 'calculator' object
+const sum = calculator.add(5, 3);         // Calling the 'add' method
+const product = calculator.multiply(4, 2); // Calling the 'multiply' method
+
+console.log(sum);     // Output: 8
+console.log(product); // Output: 8
+
+the`add` and `multiply` are member functions of the `calculator` object. You can call these functions on the `calculator` object to perform addition and multiplication operations.
+Member functions can also access and modify member variables of the same object. This allows you to encapsulate both data and behavior within the object, promoting a more organized and modular code structure.

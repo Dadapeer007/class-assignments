@@ -1,0 +1,23 @@
+2. Explain the concept of hoisting in JavaScript. How does it affect variable declarations?
+
+The variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed. This means that regardless of where variables and functions are declared in your code, they are "hoisted" to the top of their respective scope, making them accessible throughout that scope.
+
+a. Variable Declarations with `var`:
+
+   When you declare a variable using `var`, the declaration is hoisted to the top of its containing function or global scope, but the initialization remains in place. This means that the variable is available from the beginning of its scope but is initialized with the value `undefined` until the actual assignment is encountered in the code.
+
+   console.log(myVar); // undefined
+   var myVar = 10;
+   console.log(myVar); // 10
+
+   In the above example, `myVar` is hoisted to the top of the function scope, so the first `console.log` statement does not throw an error, but it logs `undefined` because the assignment has not been reached yet.
+
+b. Variable Declarations with `let` and `const`:
+
+   Variables declared with `let` and `const` are also hoisted to the top of their containing block or function scope but have a different behavior than `var`. They are in a "temporal dead zone" (TDZ) until their actual declaration is encountered in the code. Attempting to access them before declaration results in a `ReferenceError`.
+
+   console.log(myVar); // ReferenceError: Cannot access 'myVar' before initialization
+   let myVar = 10;
+   console.log(myVar); // 10
+
+   In this example, trying to access `myVar` before its declaration throws an error because it's still in the TDZ.
