@@ -1,0 +1,11 @@
+3. what is a binary tree?
+
+The binary tree is a hierarchical data structure composed of nodes. Each node in a binary tree has at most two children, which are referred to as the left child and the right child. The topmost node in a binary tree is called the root, and it serves as the starting point for traversing the tree.
+
+ex:  
+
+       10
+      /  \
+     5    15
+    / \   / \
+   3   7 12  18

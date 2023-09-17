@@ -1,0 +1,78 @@
+1) what are data structures
+
+The data structures are used to organize and store data efficiently. JavaScript provides several built-in data structures, and you can also implement custom data structures as needed.
+
+a. Arrays:
+   
+Arrays are ordered collections of elements that can hold values of different data types.
+They are defined using square brackets []
+
+
+   const numbers = [1, 2, 3, 4, 5];
+   const fruits = ["apple", "banana", "cherry"];
+  
+
+b.Objects:
+
+Objects are collections of key-value pairs where keys are strings (or Symbols) and values can be of any data type.Objects are defined using curly braces {}.
+
+   const person = {
+     name: "John",
+     age: 30,
+     address: {
+       street: "123 Main St",
+       city: "Anytown"
+     }
+   };
+   
+
+c. Maps:
+  
+Maps are data structures that store key-value pairs. They are similar to objects but with a few key differences, such as the ability to use any data type as keys.
+  Maps are created using the `Map` constructor.
+
+   const myMap = new Map();
+   myMap.set("name", "Alice");
+   myMap.set("age", 25);
+ 
+
+d. Sets:
+
+Sets are collections of unique values. They are useful for maintaining a list of unique items.Sets are created using the `Set` constructor.
+
+   const mySet = new Set();
+   mySet.add(1);
+   mySet.add(2);
+   mySet.add(2); // Won't be added, as it's a duplicate
+
+
+e. Stacks:
+
+A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle. Elements are added and removed from one end called the "top."
+Stacks can be implemented using arrays or objects.
+
+   const stack = [];
+   stack.push(1);
+   stack.push(2);
+   const poppedItem = stack.pop(); // Removes and returns 2
+
+f. Queues:
+
+A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. Elements are added at the rear and removed from the front.
+Queues can be implemented using arrays or objects.
+
+   const queue = [];
+   queue.push("first");
+   queue.push("second");
+   const removedItem = queue.shift(); // Removes and returns "first"
+
+g. Linked Lists:
+
+A linked list is a data structure where each element (node) points to the next one, forming a chain. Linked lists can be used to implement more complex data structures like stacks and queues.Linked lists can be implemented using custom objects or classes.
+
+   class Node {
+     constructor(value) {
+       this.value = value;
+       this.next = null;
+     }
+   }
