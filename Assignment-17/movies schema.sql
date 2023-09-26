@@ -26,6 +26,7 @@ Table A belongs to Table B etc.*/
 
 
 -- Create the Movie table
+
 CREATE TABLE Movie (
     movie_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -35,6 +36,7 @@ CREATE TABLE Movie (
 );
 
 -- Create the MovieActor table for the many-to-many relationship
+
 CREATE TABLE MovieActor (
     movie_id INT,
     actor_id INT,
