@@ -1,0 +1,12 @@
+Indexing in the context of databases refers to the process of creating a data structure that enhances the speed of data retrieval operations on a database table. 
+
+1.Improves Query Performance:Indexes are used to speed up query execution. When you execute a query that filters or searches for specific data, the database engine can use the index to quickly locate the rows that match the query criteria, rather than scanning the entire table.
+
+2.Data Sorting:In addition to speeding up searches, indexes are used to maintain data in sorted order for columns that have an index. This sorting can be in ascending (default) or descending order.
+
+3.Unique Constraints:Indexes can enforce the uniqueness constraint on one or more columns, ensuring that no duplicate values are allowed in those columns.
+
+4.Primary Key:The primary key of a table is essentially a unique index that uniquely identifies each row in the table. It enforces the uniqueness constraint and allows for efficient retrieval of specific rows based on their primary key values.
+
+5.Foreign Key Optimization:Indexes on columns that are used as foreign keys in other tables can improve the performance of JOIN operations and maintain referential integrity.
+

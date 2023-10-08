@@ -1,0 +1,35 @@
+Aggregate functions in SQL are functions that operate on a set of values and return a single value as a result.
+These functions allow you to perform calculations on groups of rows, such as calculating sums, averages, counts, minimum values, and maximum values. Aggregate functions are commonly used with the `GROUP BY` clause to perform calculations on subsets of data within a table.
+
+1. COUNT():Counts the number of rows in a group.
+
+   SELECT COUNT(*) FROM employees;
+   
+2. SUM():Calculates the sum of a numeric column in a group.
+
+   SELECT SUM(salary) FROM employees;
+
+3. AVG():Calculates the average of a numeric column in a group.
+   
+   SELECT AVG(salary) FROM employees;
+   
+4. MIN():Returns the minimum value in a group.
+   
+   SELECT MIN(salary) FROM employees;
+  
+5. MAX():Returns the maximum value in a group.
+
+   SELECT MAX(salary) FROM employees;
+  
+6. GROUP_CONCAT():Concatenates values from multiple rows into a single string.
+
+   SELECT GROUP_CONCAT(product_name SEPARATOR ', ') FROM products;
+
+7. HAVING:Used in conjunction with `GROUP BY` to filter groups based on aggregate conditions.
+
+   SELECT department, AVG(salary) as avg_salary
+   FROM employees
+   GROUP BY department
+   HAVING AVG(salary) > 50000;
+
+  

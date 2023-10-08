@@ -1,0 +1,16 @@
+Transaction isolation levels in a relational database management system (RDBMS) determine how concurrent transactions interact with each other and how they perceive the data modifications made by other transactions. 
+
+they can set the transaction isolation level using the `SET TRANSACTION` statement. Here's the syntax for changing the isolation level:
+
+SET TRANSACTION ISOLATION LEVEL isolation_level;
+
+Replace `isolation_level` with one of the isolation level names (e.g., 'READ UNCOMMITTED', 'READ COMMITTED', 'REPEATABLE READ', 'SERIALIZABLE').
+
+Here are some examples of how to set the isolation level:
+
+-- Set the isolation level to READ COMMITTED
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+-- Set the isolation level to SERIALIZABLE
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+

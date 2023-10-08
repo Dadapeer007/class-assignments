@@ -1,0 +1,12 @@
+Normalization is a process in database design that organizes and structures a relational database in such a way that it minimizes data redundancy and ensures data integrity. The primary goal of normalization is to reduce data anomalies, such as update anomalies, insertion anomalies, and deletion anomalies, by breaking down database tables into smaller, related tables with specific relationships between them.
+
+
+1.Elimination of Data Redundancy:Normalization reduces data redundancy by ensuring that each piece of data is stored in only one place within the database. This minimizes the risk of inconsistencies and errors that can occur when the same data is duplicated across multiple records.
+
+2.Data Consistency:By organizing data into related tables, normalization helps maintain data consistency. Updates, inserts, and deletes are less likely to result in data anomalies or inconsistencies.
+
+3.Efficient Use of Storage:Normalization can lead to more efficient storage of data by eliminating redundant data. Smaller, well-structured tables can result in smaller database sizes.
+
+4.Improved Query Performance:While normalization can lead to smaller, more efficient tables, it may also require joining multiple tables together to retrieve data. However, modern database management systems are optimized for performing joins efficiently, so the impact on query performance is generally minimal.
+
+5.Easier Maintenance:A well-normalized database schema is typically easier to maintain and modify. Changes to the data structure are less likely to have a cascading effect on other parts of the database.

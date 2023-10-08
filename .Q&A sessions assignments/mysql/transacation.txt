@@ -1,0 +1,60 @@
+ Transaction
+
+Transaction deals with the management of transactions within a database.
+Transactions ensure data consistency, integrity, and reliability in a database by grouping
+related operations together and either committing or rolling back changes based on the
+success or failure of those operations.
+There are three main TCL commands in SQL: COMMIT, ROLLBACK, and SAVEPOINT.
+
+1. COMMIT:
+
+The COMMIT command is used to permanently save the changes made during a
+transaction.
+It makes all the changes applied to the database since the last COMMIT or ROLLBACK
+command permanent.
+Once a COMMIT is executed, the transaction is considered successful, and the changes are
+made permanent.
+
+Example: Committing changes made during a transaction:
+
+UPDATE Employees
+SET Salary = Salary * 1.10
+WHERE Department = 'Sales';
+COMMIT;
+
+2. ROLLBACK:
+
+The ROLLBACK command is used to undo changes made during a transaction.
+It reverts all the changes applied to the database since the transaction began.
+ROLLBACK is typically used when an error occurs during the execution of a transaction,
+ensuring that the database remains in a consistent state.
+Example: Rolling back changes due to an error during a transaction:
+
+BEGIN;
+UPDATE Inventory
+SET Quantity = Quantity - 10
+WHERE ProductID = 101;
+-- An error occurs here
+ROLLBACK;
+
+3. SAVEPOINT:
+
+The SAVEPOINT command creates a named point within a transaction, allowing you to set a
+point to which you can later ROLLBACK if needed.
+SAVEPOINTs are useful when you want to undo part of a transaction while preserving other
+changes.
+Syntax: SAVEPOINT savepoint_name;
+Example: Using SAVEPOINT to create a point within a transaction:
+
+BEGIN;
+UPDATE Accounts
+SET Balance = Balance - 100
+WHERE AccountID = 123;
+SAVEPOINT before_withdrawal;
+UPDATE Accounts
+SET Balance = Balance + 100
+WHERE AccountID = 456;
+-- An error occurs here
+ROLLBACK TO before_withdrawal;
+-- The first update is still applied
+COMMIT;
