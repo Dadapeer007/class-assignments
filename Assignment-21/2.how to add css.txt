@@ -1,0 +1,61 @@
+2. How to add css sheets to the html document
+To add CSS stylesheets to an HTML document, there are several methods you can use. The most common methods include:
+
+a.External CSS File:
+
+   Create a separate CSS file with a .css extension, such as `styles.css`.
+   In the HTML document, inside the `<head>` section, use the `<link>` element to link to the external CSS file. Here's an example:
+
+     html
+     <!DOCTYPE html>
+     <html>
+     <head>
+         <link rel="stylesheet" type="text/css" href="styles.css">
+     </head>
+     <body>
+         <!-- Your HTML content here -->
+     </body>
+     </html>
+Make sure to replace `"styles.css"` with the actual path to your CSS file.
+
+b.Internal CSS:
+
+ In the HTML document, you can include CSS rules directly within a `<style>` element in the `<head>` section. Here's an example:
+
+     html
+     <!DOCTYPE html>
+     <html>
+     <head>
+         <style>
+             /* CSS rules go here */
+             body {
+                 background-color: #f0f0f0;
+             }
+             h1 {
+                 color: #333;
+             }
+         </style>
+     </head>
+     <body>
+         <!-- Your HTML content here -->
+     </body>
+     </html>
+
+CSS rules defined within the `<style>` element apply only to the HTML document in which they are defined.
+
+c.Inline CSS:
+
+ You can also apply CSS directly to individual HTML elements using the `style` attribute. Here's an example:
+
+     html
+     <!DOCTYPE html>
+     <html>
+     <head>
+     </head>
+     <body>
+         <h1 style="color: blue;">This is a blue heading</h1>
+         <p style="font-size: 16px;">This is a paragraph with a custom font size.</p>
+     </body>
+     </html>
+Inline CSS applies styles to a specific element and takes precedence over external and internal CSS.
+
