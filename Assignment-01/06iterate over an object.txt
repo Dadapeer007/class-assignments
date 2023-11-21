@@ -8,7 +8,7 @@ To iterate over an object's data, you typically need to access the object's prop
 •	Identify the iteration mechanism: Most programming languages provide built-in iteration mechanisms like loops or iterators. You will need to select the one that suits your needs.
 •	Access the object's properties: Depending on the object's type, you may access its properties directly or use specific methods/functions to retrieve them.
 •	Iterate over the properties: Use the chosen iteration mechanism to loop over the object's properties. The specific syntax and methods vary between languages, but here are a few examples:
-•	For loops: Use a `for` loop to iterate over the object's properties, typically using an index variable to access each property in turn.
+•	For loops: Use a "for" loop to iterate over the object's properties, typically using an index variable to access each property in turn.
 for (var key in object) 
 {
 var value = object[key];
