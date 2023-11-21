@@ -1,0 +1,28 @@
+2.Explain different propeties of box model
+
+The box model in CSS is influenced by several properties that control how elements are sized, spaced, and laid out within a web page.
+
+a.Width and Height:
+   width: Specifies the width of an element.
+   height: Defines the height of an element.
+
+b.Padding:
+   padding: Sets the padding area around the content within an element. You can specify different values for each side (top, right, bottom, left) or a single value for all sides.
+padding-top, padding-right, padding-bottom, padding-left: Used to specify padding for individual sides.
+
+c.Border:
+  border: Sets the width, style, and color of the element's border. This property can be used to set all border properties in a single line.
+  border-width, border-style, border-color: These properties can be used individually to set specific aspects of the border (width, style, color).
+  border-top, border-right, border-bottom, border-left: Allow setting border properties for individual sides.
+
+d.Margin:
+    margin: Sets the margin outside the border of an element. Similar to padding, you can set different values for each side or a single value for all sides.
+   margin-top, margin-right,margin-bottom, margin-left: Specify margin for individual sides.
+
+e.Box Sizing:
+   box-sizing: Defines how the width and height of an element are calculated, including or excluding padding and border.
+   box-sizing: content-box: Default behavior, where the width and height set for an element apply only to the content area.
+   box-sizing: border-box: Includes padding and border in the specified width and height of an element.
+
+6.Outline:
+   outline: Creates a line around the outer edge of an element, typically used instead of a border for highlighting purposes. It doesn't affect the layout of the document.
