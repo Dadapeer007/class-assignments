@@ -1,0 +1,64 @@
+
+main{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header{
+    text-align: center;
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(44, 44, 249);
+    padding-top: 25px;
+}
+div{
+    align-items: center;
+    border-style: solid;
+    border-color: rgb(123, 122, 122);
+    border-radius: 10px;
+    border-width: 2px;
+    width: 500px;
+    padding-left: 25px;
+    height: 350px;
+    margin: 10px;
+    padding-inline: initial;
+  
+    
+    
+}
+p{
+    font-size: 22px;
+    text-align: center;
+}
+#email{
+    height: 40px;
+    width: 450px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+#password{
+    height: 40px;
+    width: 450px;
+    border-radius: 5px;
+    margin: 10px;
+}
+button{
+    height: 40px;
+    width: 455px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    margin: 22px;
+}
+
+.f{
+    color:blue;
+    text-decoration:none;
+    margin: 5px;
+    
+}
