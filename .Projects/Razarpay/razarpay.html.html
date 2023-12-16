@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Razorpay</title>
+</head>
+<style>
+    body{
+    margin:0;
+    padding:0;
+  }
+  
+  header{
+    background-color:rgb(10, 10, 79);
+    color:white;
+  }
+  #navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px;
+  }
+  #logo{
+    width: 80px;
+    padding-left:80px;
+  }
+ 
+  nav a{
+    display: inline;
+    margin-right: 20px;
+    color:white;
+    text-decoration: none;
+  }
+
+  
+  .login {
+    display: flex;
+    align-items: center;
+  }
+
+  #conutry_selector {
+    padding: 6px;
+    border-radius: 5px;
+    background-color:white;
+    color:black;
+    margin-right:10px;
+  }
+  
+  #login-box {
+    text-decoration:none;
+    background-color:rgb(10, 10, 79);
+    color:white;
+    border:1px;
+    border-style: solid;
+    border-color:skyblue;
+    border-radius: 5px;
+    margin-right: 10px;
+    display:inline-block;
+    padding: 8px 20px;
+  }
+  #signup-box{
+
+    text-decoration:none;
+    background-color:white;
+    color:blue;
+    border:1px;
+    border-style: solid;
+    border-color:skyblue;
+    border-radius: 5px;
+    margin-right: 10px;
+    display:inline-block;
+    padding: 8px 20px;
+  }
+  #login-now-box{
+    text-decoration:none;
+    background-color:blue;
+    color:white;
+    border:1px;
+    border-style: solid;
+    border-color:skyblue;
+    border-radius: 5px;
+    margin-right: 10px;
+    display:inline-block;
+    padding: 8px 20px;
+  }
+  #content {
+    display: flex;
+    background-color:rgb(10, 10, 79);
+    color: white;
+    padding-left: 150px;
+}
+
+.text-content {
+    padding: 50px
+}
+
+
+#img123 {
+    height: 500px;
+}
+#signup-now{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* <!--main part--> */
+
+* {
+  margin:0;
+  padding:0;
+}
+.div1, .div2 {
+  display: flex;
+  justify-content: space-around;
+  margin:10px 100px 10px 100px;
+}
+
+.sub-div1 {
+  width: 23%; 
+  text-align: start;
+  padding: 20px 5px 20px 5px;
+  margin: 20px;
+  background-color:rgb(39, 73, 209);
+}
+
+.sub-div img {
+  width:50px;
+  height: 100px;
+}
+
+.sub-div h2 {
+  margin-top: 10px;
+}
+
+.mainDiv {
+  width: 1000px;
+  height: 500px;
+  display: flex;
+}
+.leftDiv {
+  width: 50%;
+  height: 100%;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.rightDiv {
+  width: 50%;
+  height: 100%;
+}
+.rightDiv img {
+  width: 50px;
+  height: 50px;
+}
+#login-now-box{
+  text-decoration:none;
+  background-color:blue;
+  color:white;
+  border:1px;
+  border-style: solid;
+  border-color:skyblue;
+  border-radius: 5px;
+  margin-right: 10px;
+  display:inline-block;
+  padding: 8px 20px;
+}
+#main1{
+  height: 500px;
+  width: 800px;
+}
+
+
+
+footer {
+  display: flex;
+  background-color: rgb(224, 228, 230);
+}
+
+.column {
+  flex: 1;
+}
+
+.left-side,
+.content {
+  padding: 20px;
+}
+
+
+.logo img {
+  width: 100px;
+}
+
+.images img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.sub-div {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.sub-div h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sub-div a {
+  display: block;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color:blue;
+}
+
+
+/* main2 */
+#main2container {
+    width: 500px;
+    height: 1000px;  
+}
+#scrollingImage {
+    width: 500px;
+    height: 900px; 
+    animation: scrollAnimation 05s linear infinite;
+}
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(00);
+    }
+    100% {
+        transform: translateY(-200px); 
+    }
+}
+#main2content {
+    display: flex;
+    color:black;
+    padding-left: 100px;
+    background-color: rgb(220, 231, 243);
+}
+.main2text-content {
+    padding: 50px
+}
+#main2signup-now{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:blue;
+    color:black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+  <header>
+    <div id="navbar">
+      <div id="logo">
+        <img id="logo" src="logo.png" alt="RazodPay">
+      </div>
+      <nav id="nav">
+          <a href="#">Payment</a>
+          <a href="#">Banking+</a>
+          <a href="#">Credit</a>
+          <a href="#">Payroll</a>
+          <a href="#">Resources</a>
+          <a href="#">Support</a>
+          <a href="#">Praising</a>
+      </nav>
+      <div class="login">
+        <select id="conutry_selector">
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+        </select>
+        <a href="signin.html" id="login-box">Log In</a>
+        <a href="signin.html" id="signup-box">Sign Up➔</a>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div class="text-content">
+          <pre><h1>Power your finance,
+grow your business</h1>
+          </pre>
+          <pre><h3>Accept payments from customer.Automate
+payouts to vendors & employees.New run out of
+working capital.</h3>
+          </pre>
+          <a id="signup-now" href="signin.html" >Sign Up Now ➔</a>
+      </div>
+      <div class="image-content">
+          <img id="img123" src="headerimg.jpg" alt="bgp">
+      </div>
+  </div>
+  
+  </header>
+
+  
+
+
+
+  <main style=" background-color:rgb(39, 73, 209);
+color:white;">
+    <h1 style="text-align: center;">Features</h1>
+    <br>
+    <pre style="text-align: center;">Empower your business with all the right tools to accept online
+        payments and provide the best customer experience</pre>
+    <div class="main-con">
+        <div class="div1">
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/instant-activation.6f975aa6.svg" alt="Image 1">
+                <h2>Instant Activation</h2>
+                <p>Get activated and transact within 2 minutes. Completely online onboarding with minimum documentation.</p>
+            </div>
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/easy-integration.18651e2f.svg" alt="Image 2">
+                <h2>Easy Integration</h2>
+                <p>With plugins for all major platforms and languages, integrate and go live with Razorpay in less than an hour.</p>
+            </div>
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/api-driven.207572da.svg" alt="Image 2">
+                <h2>API Driven</h2>
+                <p>Build your business for scale with our complete API-driven automation that requires zero manual intervention</p>
+            </div>
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/payment-modes.da25e039.svg" alt="Image 2">
+                <h2>100+ payment modes</h2>
+                <p>Offer your customers the luxury of all payment modes including Credit/Debit cards, Netbanking, UPI, Wallets etc</p>
+            </div><br>
+
+        </div>
+<br>
+        <div class="div2">
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/simple-pricing.dc58cdbb.svg" alt="Image 3">
+                <h2>Simple Pricing</h2>
+                <p>Our innovative payment solutions with competitive pricing make payments simpler</p>
+            </div>
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/support.714ccbce.svg" alt="Image 4">
+                <h2>Best in Industry Support</h2>
+                <p>Always available email, phone and chat based support to help you in your every stepp>
+            </div>
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/dashboard-reporting.15590378.svg" alt="Image 4">
+                <h2>Dashboard Reporting</h2>
+                <p>Real-time data and insights on your Razorpay Dashboard to make informed business decisions.</p>
+            </div>
+            <div class="sub-div1">
+                <img src="https://razorpay.com/build/browser/static/secure.742a33ac.svg" alt="Image 4">
+                <h2>Secure</h2>
+                <p>PCI DSS Level 1 compliant solution which removes your burden of regulatory compliance.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<h1 style="text-align: center;">Accept Payments with Razorpay Payment Suite</h1>
+  <div class="mainDiv">
+      <div class="leftDiv">
+          <h2>Accept Payments with Razorpay Payment Suite</h2>
+              <li>100+ Payment Methods</li>
+              <br><li>Industry Leading Success Rate</li>
+              <br><li>Superior Checkout Experience</li>
+              <br><li>Easy to Integrate</li>
+              <br><li>Instant Settlements from day </li>
+              <br><li>In-depth Reporting and Insights</li>
+   <br>
+   <br>       
+  <button id="login-now-box">SigUp Now </button>
+  <a href="#" class="button" style="text-decoration: none;">Know more ></a>
+      </div>
+      <div class="rightDiv">
+          <img  id="main1" src="https://theovaku.com/wp-content/uploads/2023/05/razorpay.jpg" alt="Image">
+      </div>
+  </div>
+  <!-- main2 -->
+  
+  <div id="main2content">
+    <div class="main2text-content">
+        <pre><h1>Join the 50,00,000 businesses using Razorpay
+        </h1>
+        </pre>
+        <pre><h3>We make it easier for you to focus on building great products while we work on 
+simplifying your payments. Become one of us by joining thousands of our happy users and
+simplify the online payment experience for your customers.
+
+Focus on your business while we handle the complexities of payments for you</h3>
+        </pre>
+        <a id="main2signup-now" href="signin.html">Get Started ➔</a>
+    </div>
+    <div id="main2container">
+        <img id="scrollingImage" src="https://razorpay.com/build/browser/static/merchants.204d7741.png"
+            alt="Scrolling Image">
+    </div>
+
+</div>
+
+  <!-- footer -->
+  <footer>
+    <div class="column">
+        <div class="left-side">
+            <div class="logo">
+                <img src="logo.png" alt="Logo"><br>
+                <p>
+                    Razorpay is the only payments solution in India that allows businesses to accept, process and disburse payments with its product suite. It gives you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.
+                    Razorpay is the only payments solution in India that allows businesses to accept, process and disburse payments with its product suite. It gives you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.
+                    
+                    RazorpayX supercharges your business banking experience, bringing effectiveness, efficiency, and excellence to all financial processes. With RazorpayX, businesses can get access to fully-functional current accounts, supercharge their payouts and automate payroll compliance.
+                    
+                    Manage your marketplace, automate bank transfers, collect recurring payments, share invoices with customers and avail working capital loans - all from a single platform. Fast forward your business with Razorpay.</pre>
+            </div>
+            <div class="images">
+                <img src="https://razorpay.com/build/browser/static/pci-compliant.f0aea468.png" alt="Image 1">
+                <img src="https://razorpay.com/build/browser/static/iso-certified.4fd701ec.jpg" alt="Image 2" style="margin-left: 30px;">
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="content">
+            <div class="sub-div">
+                <h2>BANKING PLUS</h2>
+                <a href="#">RazorpayX</a>
+                <a href="#">Current Accounts</a>
+                <a href="#">Payout links</a>
+                <a href="#">Corporate Credit Card</a>
+                <a href="#">View Live Demo</a>
+            </div>
+            <div class="sub-div">
+                <h2>LENDING</h2>
+                <a href="#">Razorpay capital</a>
+                <a href="#">Instant Settlements</a>
+                <a href="#">Line of Cedit</a>
+                <a href="#">Working Capital Loans</a>
+                <a href="#">Marketplace Instant Settlements</a>
+            </div>
+            <div class="sub-div">
+                <h2>BECOME A PARTNER</h2>
+                <a href="#">Refer and Eran</a>
+                <a href="#">Invoices</a>
+                <a href="#">Flash Checkout</a>
+                <a href="#">UPI</a>
+                <a href="#">RazorpayX payroll</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="content">
+            
+            <div class="sub-div">
+                <h2>ACCEPT PAYMENTS</h2>
+                <a href="#">Payment gateWay</a>
+                <a href="#">Payment Pages</a>
+                <a href="#">QR code</a>
+                <a href="#">Smart Collect</a>
+                <a href="#">Optimizer</a>
+            </div>
+            <div class="sub-div">
+                <h2>DEVELOPERS</h2>
+                <a href="#">Docs</a>
+                <a href="#">Intergrations</a>
+                <a href="#">API Refernces</a>
+                <a href="#">Events</a>
+                <a href="#">Blogs</a>
+            </div>
+            <div class="sub-div">
+                <h2>RESOURCES</h2>
+                <a href="#">Eduction</a>
+                <a href="#">E-commerce</a>
+                <a href="#">sass</a>
+                <a href="#">GST Calculator</a>
+                <a href="#">Online TDS Patment</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="content">
+            
+            <div class="sub-div">
+                <h2>COMPANY</h2>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Terms of uses</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Partner</a>
+            </div>
+            <div class="sub-div">
+                <h2>HELP & SUPPORT</h2>
+                <a href="#">Support</a>
+                <a href="#">Knowledge base</a>
+                <a href="#">Flash Checkout</a>
+                <a href="#">Route</a>
+                <a href="#">freelancer Payments</a>
+            </div>
+            <div class="sub-div9">
+                <h2>FIND US ONLINE</h2>
+                <a href="https://facebook.com/razorpay"><img src ="https://razorpay.com/build/browser/static/facebook.c8412162.svg" ></a>
+                <a href=https://twitter.com/razorpay><img src =https://razorpay.com/build/browser/static/twitter.1da3bf4c.svg style="margin-left: 20px;"></a>
+                <a href=https://instagram.com/razorpay><img src =https://razorpay.com/build/browser/static/instagram.136e6800.svg style="margin-left: 20px;"></a>
+                <a href=https://github.com/razorpay><img src =https://razorpay.com/build/browser/static/github.cede60eb.svg style="margin-left: 20px;"></a>
+                <h2>REGD. OFFICE ADDRESS</h2>
+                <h3><pre>Razorpay Software Private Limited,
+1st Floor, SJR Cyber,
+22 Laskar Hosur Road, Adugodi,
+Bengaluru, 560030,
+Karnataka, India
+CIN: U72200KA2013PTC097389
+                    
+© Razorpay 2023
+All Rights Reserved</pre></h3>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
