@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <script src="https://kit.fontawesome.com/b72ca5dea6.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
+</head>
+<style>
+    
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.toolbox-cont{
+    background-color: #504747;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.toolbox-status-cont{
+    height: 75%;
+    width: 20%;
+    background-color: #696464;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    margin-left: 100px;
+}
+
+.action-btn-cont{    
+    height: 75%;
+    width: 10%;
+    background-color: rgb(87, 83, 83);
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxs{
+    height: 80%;
+    width:20%
+}
+
+.lightpink{
+    background-color: lightpink;
+}
+.lightgreen{
+    background-color: lightgreen;
+}
+.lightblue{
+    background-color: skyblue;
+}
+.black{
+    background-color: black;
+}
+
+.box:hover{
+    background-color:  #49525b;
+}
+
+
+.addbutton{
+    height: 100%;
+    width:50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addbutton:hover{
+    background-color: green;
+}
+.removebutton{
+    height: 100%;
+    width:50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.removebutton:hover{
+    background-color: green;
+}
+.action-btn-cont i{
+    font-size: 2rem;
+}
+
+.task-creator{
+    position: absolute;
+    height: 50vh;
+    width: 45vw;
+    background-color: rgb(230, 201, 206);
+    top: 30%;
+    left: 30%;
+    display: none;
+}
+
+.textArea-cont{
+    width: 75%;
+    height: 100%;
+    color: black;
+    font-size: 2rem;
+    border: none;
+    outline:none;
+    background-color: rgb(154, 150, 150);
+    resize: none;
+
+}
+.priority-colors-cont{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.priority-colors{
+    height: 20%;
+    width: 80%;
+}
+
+
+.active{
+    border: 2px solid red;
+}
+
+.ticket-cont{
+
+    height: 20rem;
+    width: 20rem;
+    background-color: coral;
+}
+
+.ticket-prio{
+    height: 10%;
+}
+
+.ticket-id{
+    height: 10%;
+    background-color: yellow;
+}
+.task-area{
+    height: 60%;
+}
+.main-cont{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.lock-parent{
+    height: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.lock-icon{
+    margin: 0.3rem
+}
+
+</style>
+<body>
+    <nav class="toolbox-cont">
+        <div class="toolbox-status-cont">
+            <div class="lightpink boxs"></div>
+            <div class="lightgreen boxs"></div>
+            <div class="lightblue boxs"></div>
+            <div class="black boxs"></div>
+        </div>
+
+        <div class="action-btn-cont">
+            <div class="addbutton">+</div>
+            <div class="removebutton">x</div>
+        </div>
+    </nav>
+
+    <div class="main-cont">
+    </div>
+    <div class="task-creator">
+        <textarea class="textArea-cont" placeholder="Enter Your Task"> </textarea>
+        <div class="priority-colors-cont">
+            <div class="lightpink priority-colors"></div>
+            <div class="lightgreen priority-colors"></div>
+            <div class="lightblue priority-colors"></div>
+            <div class="black priority-colors"></div>
+        </div>
+    </div>
+</body>
+<script>
+const addbtn = document.querySelector(".addbutton")
+const taskcreator = document.querySelector(".task-creator")
+let addtaskflag = false;
+
+addbtn.addEventListener('click', function(){
+
+    addtaskflag = !addtaskflag
+    if(addtaskflag)
+    {
+        taskcreator.style.display = 'flex';
+        addbtn.style.color="red";
+    }
+    else{
+        taskcreator.style.display = 'none';
+        addbtn.style.color="white";
+    }
+
+})
+
+
+const prioritycolorbox = document.querySelectorAll(".priority-colors")
+const textarea = document.querySelector('.textArea-cont')
+let taskColor = 'lightpink';
+
+
+prioritycolorbox.forEach(function(aPrioBox)
+{
+    aPrioBox.addEventListener('click', function()
+    {
+        prioritycolorbox.forEach(function(anelement)
+        {
+            anelement.classList.remove('active')
+        })
+        aPrioBox.classList.add('active')
+        taskColor = aPrioBox.classList[0]
+        console.log(taskColor)
+    })
+})
+
+textarea.addEventListener('keydown', function(e)
+{
+    if(e.key==='Shift')
+    {
+        
+        createTicket(taskColor, textarea.value, shortid())
+        textarea.value=""
+        addtaskflag = !addtaskflag
+        taskcreator.style.display = 'none'
+    }
+})
+
+
+function createTicket(taskprio, taskContent, taskId )
+{
+    let ticketCont = document.createElement('div')
+    ticketCont.setAttribute('class', 'ticket-cont')
+
+    ticketCont.innerHTML=`<div class="ticket-prio ${taskprio}"></div>
+    <div class="ticket-id"> ${taskId} </div>
+    <div class="task-area"> ${taskContent}</div>
+    <div class="lock-parent"> <i class="lock-icon fa-solid fa-lock"></i> </div>`
+    maincont.append(ticketCont)
+    handleDeleteticket(ticketCont)
+    handlelock(ticketCont)
+    
+}
+
+const maincont = document.querySelector('.main-cont')
+const rmbtn = document.querySelector('.removebutton')
+let deletetask = false;
+
+rmbtn.addEventListener('click', function()
+{
+    deletetask = !deletetask
+    if(deletetask)
+    {
+        alert('Delete option is activated')
+        rmbtn.style.color= 'red'
+    }
+    else{
+        rmbtn.style.color = 'white'
+    }
+  
+
+})
+
+
+
+
+function handleDeleteticket(ticket){
+
+    ticket.addEventListener('click', function()
+    {
+        if(deletetask)
+            ticket.remove()
+    })
+
+}
+
+function handlelock(ticketCont)
+{
+    let lock_icon = ticketCont.querySelector('.lock-parent .lock-icon')
+    let taskArea = ticketCont.querySelector('.task-area')
+
+    lock_icon.addEventListener('click', function()
+    {
+        if(lock_icon.classList[2] == "fa-lock")
+        {
+            lock_icon.classList.remove("fa-lock")
+            lock_icon.classList.add("fa-lock-open")
+            taskArea.setAttribute('contenteditable', 'true')
+
+        }
+        else{
+            lock_icon.classList.remove("fa-lock-open")
+            lock_icon.classList.add("fa-lock")
+            taskArea.setAttribute('contenteditable', 'false')
+        }
+
+    })
+}
+</script>
+</html>
